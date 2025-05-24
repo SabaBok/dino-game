@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+}
+body{
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #1a1a1a;
+    transition: 0.2s;   
+}
+.cont{
+    width: 80%;
+    border: 1.5px solid black;
+    box-shadow: 0px 0px 20px 0px black;
+    background-color: #333;
+    height: 200px;
+    position: relative;
+    border-radius: 7px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    transition: 1s;
+}
+#dino{
+    width: 50px;
+    position: absolute;
+    top: 150px;
+    left: 100px;
+}
+.jump{
+    animation: jump 0.3s linear;
+}
+@keyframes jump {
+    0% { top: 150px; }
+    40% { top: 70px; }
+    100% { top: 150px; }
+}
+.cactus{
+    width: 20px;
+    height: 40px;
+    background-image: url(cactus.png);
+    background-size: cover;
+    position: absolute;
+    top: 160px;
+    left: 100%;
+    animation: cacti 2s linear forwards;
+}
+@keyframes cacti {
+    0% { left: 100%; }
+    100% { left: -50px; }
+}
+#mover{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: mover 7s linear infinite;
+}
+@keyframes mover {
+    0%{
+        top: 20%;
+    }
+    10%{
+        top: 30%;
+        left: 500px;
+    }
+    20%{
+        top: 40%;
+        left: 400px;
+    }
+    30%{
+        top: 30%;
+        left: 300px;
+    }
+    40%{
+        top: 30%;
+        left: 200px;
+    }
+    50%{
+        top: 20%;
+        left: 50%;
+    }
+    60%{
+        top: 30%;
+        left: 50%;
+    }
+    70%{
+        top: 40%;
+        left: 60%;
+    }
+    80%{
+        top: 40%;
+        left: 70%;
+    }
+    90%{
+        top: 30%;
+        left: 60%;
+    }
+    100%{
+        top: 20%;
+        left: 50%;
+    }
+
+}
+#comp{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    z-index: 11;
+    top: 57%;
+    left: 50%;
+    width: 91%;
+    height: 350px;
+}
